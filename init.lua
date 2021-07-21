@@ -12,13 +12,9 @@ minetest.register_on_newplayer(function(player)
     meta:set_int("sp",0)  --falta implementar
     meta:set_int("last_lvl",1) --falta implementar
     meta:set_int("exp",0)   --falta implementar
-    meta:set_float("stamina",20)
+    meta:set_float("stamina",20) --falta implementar
     meta:set_float("vel",1)
     meta:set_float("jump",1)
-
-    if minetest.get_modpath("hbsprint") then
-       --meta
-    end
     
 end)
 
@@ -29,8 +25,8 @@ player_stats.set_stats(player)
 end)
 
 
-
-minetest.register_chatcommand("hp", {
+--test function. will be removed
+minetest.register_chatcommand("demo", {
     func = function(name)
         player = minetest.get_player_by_name(name)
         player_stats.increase_max_hp(player)
