@@ -10,8 +10,6 @@ player_stats.set_stats = function(player)
         jump = meta:get_float("jump"),
         speed = meta:get_float("vel")
         })
-minetest.chat_send_all("jump: "..meta:get_float("jump"))
-minetest.chat_send_all("vel: "..meta:get_float("vel"))
 end
 
 --Incrementar el hp
